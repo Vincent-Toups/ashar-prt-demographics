@@ -1,0 +1,5311 @@
+University of Colorado
+
+Colorado Clinical & Translational Sciences Institute (CCTSI) with the Development and Informatics Service Center (DISC)
+
+Psych Txs for Chronic Back Pain
+Codebook
+
+Data Dictionary Codebook
+#
+
+Variable / Field
+Name
+
+Instrument:
+
+Field Label
+Field Note
+
+Field Attributes (Field Type,
+Validation, Choices, Calculations,
+etc.)
+
+Eligibility Prescreening (eligibility_prescreening)
+
+1
+
+record_id
+
+Record ID
+
+text
+
+2
+
+consent_ eld
+
+Mind-body treatments for chronic back pain
+Investigator: Dr. Tor D. Wager, CU Boulder
+
+descriptive
+
+Thank you for your interest in this study. Before
+you come in to learn more about the study, it
+would be helpful to see if you are likely to
+qualify to be in the study. In order to do this, we
+would like to ask you some eligibility questions,
+which will include questions about your back
+pain, mental health history, medical history, and
+more. It should take about 15 minutes to go
+through these questions.
+We invite you to take part in a research study
+because you su er from chronic back pain. The
+purpose of this study is to test the e cacy of a
+novel mind-body treatment for back pain. In
+this study, we want to understand how this
+treatment relieves pain by scanning your brain
+using functional magnetic resonance imaging
+(fMRI). In addition to the fMRI measurements,
+we will collect blood draws from you, and
+collect electroencephalography (EEG) measures
+of brain activity. Both fMRI and EEG are widely
+used, safe, non-invasive measures of brain
+activity.
+During the fMRI session you will be asked to
+
+11/25/2018 4:48pm
+
+perform a set of tasks. These include 1)
+pressure stimulations applied to your ngernail
+that will be tolerably painful, 2) listening to
+unpleasant sounds, and 3) providing ratings of
+your ongoing back pain. During the MRI scan,
+we may place you in a somewhat
+uncomfortable position (i.e., a mild back
+extension) to elicit back pain of moderate
+intensity.
+You will be randomized into one of two groups,
+like ipping a coin. One group will receive the
+treatment as soon as possible after the rst
+assessment session; the other group (a "waitlist" group) will be o ered a treatment about 4
+weeks after the rst assessment session. Both
+groups will be asked to not pursue any other
+treatments in the 4 week period between the
+assessment sessions.
+The study involves an eligibility assessment
+session, a baseline MRI session, receiving the
+treatment, and then, about 4 weeks later, a
+post-treatment MRI session. EEG will be
+collected at the eligibility session.
+During the course of this study, we ask you to
+continue your normal treatment schedule and
+not to add, stop, or change any treatmentrelated activities unless determined as
+necessary by your physician. This is important
+to help us compare changes in the treatment
+group to changes in the wait-list group.
+Payment will be around $225 for completing
+the study.
+The questions below will assess your eligibility
+for the study and will take about 15 minutes to
+complete. All the information you provide will
+be kept con dential and only accessible to
+members of the research team. If you are
+eligible, we will call you to provide further
+details about the study and see whether you'd
+like to participate.
+We are also required to give you the number of
+University of Colorado Boulder IRB, the Ethics
+Board that oversees our research, in case you
+have questions or concerns for them: it is (303)
+735-3702. The IRB is not be able to answer
+speci c questions about study participation. If
+you have questions about study participation,
+you may email canlab@colorado.edu with your
+questions or with your phone number and a
+team member will give you a call. If you
+
+complete the questions below, a study member
+will be in touch with you shortly regarding your
+eligibility and to provide more information
+about the study.
+3
+
+age_in_range
+
+Is your age between 21 and 70?
+
+radio, Required
+1 Yes
+2 No
+
+4
+
+gender
+
+Gender
+
+radio, Required
+1 Male
+2 Female
+3 Other
+
+5
+
+backpain_length
+
+How long has back pain been an ongoing
+problem for you (in years)?
+
+text (number, Min: 0, Max: 80), Required
+
+In years. e.g., 9 months would be 0.75
+
+6
+
+backpain_frequency
+
+How often has low back pain been an ongoing
+problem for you over the past 6 months?
+
+radio, Required
+1 less than half the days
+2 half the days
+3 more than half the days
+
+7
+
+backpain_intensity
+
+In the past week, how intense has your back
+pain been?
+
+radio, Required
+0
+
+0 - no pain
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10 - pain as bad as you can
+imagine
+8
+
+is_your_leg_pain_wors Is your leg pain worse than your back pain?
+e_tha
+
+radio, Required
+1 yes
+2 no
+
+9
+
+current_opioid_use
+
+Are you currently using opioid painkillers to
+manage your pain?
+i.e., Vicodin, Lortab, Norco, hydrocodone, codeine, Tylenol
+#3 or #4, fentanyl, Duragesic, MS Contin, Percocet, TYlox,
+OxyContin, oxycodone, methadone, tramadol, Ultram,
+Dilaudid
+
+radio, Required
+1 Yes
+2 No
+
+10 painkiller_length
+Show the eld ONLY i
+f:
+[current_opioid_use]
+= '1'
+11 workerscomp
+
+12 is_this_because_of_yo
+ur_pa
+
+Please describe how often and for how long you text
+used these medications.
+
+Do you receive or have you recently applied for
+disability, worker's compensation, or any other
+form of compensation that is associated with
+your pain?
+
+radio, Required
+
+Is this because of your pain?
+
+radio, Required
+
+1 Yes
+2 No
+
+1 Yes
+2 No
+
+13 do_you_have_any_litig Do you have any litigation or court cases that
+ation
+are related to your pain in any way, either right
+now or in the past year?
+
+radio, Required
+
+14 pregnancy
+
+radio, Required
+
+15 email_text_ok
+
+Are you currently pregnant or have plans to
+become pregnant within the next couple of
+months?
+
+1 Yes
+2 No
+
+1 Yes
+2 No
+
+Are you comfortable with using email or text
+yesno, Required
+messages to communicate with the study team? 1 Yes
+0 No
+
+16 preferred_contact
+
+Which do you prefer for occasional study
+communications?
+
+checkbox, Required
+1 preferred_contact___1 email
+2 preferred_contact___2 text
+messages
+3 preferred_contact___3 no
+preference
+
+17 english_pro ciency
+
+Do you have 8th grade English pro ciency or
+equivalent?
+
+radio, Required
+1 Yes
+2 No
+
+18 transportation
+
+19 sick
+
+Do you have a method of transportation with
+will enable you to attend assessment sessions,
+which will be near Arapahoe and 33rd St. in
+Boulder
+
+radio, Required
+
+Have you been sick in the last four weeks?
+
+radio, Required
+
+1 Yes
+2 No
+
+1 Yes
+2 No
+20 immunosuppressant
+
+Do you currently take an immunosuppressant
+drug, such as an oral (pill) steroid, on a regular
+basis?
+
+radio, Required
+1 Yes
+2 No
+
+21 autoimmune
+
+22 medications_change
+
+Have you been diagnosed with a speci c
+in ammatory disorder by a doctor, such as
+rheumatoid arthritis, polymyalgia rheumatica,
+scleroderma, Lupus, polymytosis, or ankylosing
+spondylitis?
+
+radio, Required
+
+Are you willing to not change your current
+medication use for the duration of this study?
+
+radio, Required
+
+1 Yes
+2 No
+
+1 Yes
+2 No
+
+23 have_you_ever_been_
+diagnos
+
+24 have_you_ever_been_
+diagnos2
+
+25 in_the_past_year_hav
+e_you
+
+Have you ever been diagnosed with
+schizophrenia, multiple personality disorder, or
+dissociative identity disorder?
+
+radio, Required
+
+Have you ever been diagnosed with cancer of
+the breast, thyroid, lung, kidney, prostate or
+blood cancer?
+
+radio, Required
+
+In the past year, have you had an unexplained,
+unintended weight loss of 20 lbs. or more?
+
+radio, Required
+
+1 Yes
+2 No
+
+1 Yes
+2 No
+
+1 Yes
+2 No
+
+26 do_you_have_di cult
+y_con
+
+Do you have di culty controlling your bowel or
+bladder function?
+
+radio, Required
+1 Yes
+2 No
+
+27 stroke_neurological_e
+vent
+
+Have you ever had a stroke or brain surgery, or
+ever been diagnosed with a brain tumor?
+
+radio, Required
+1 Yes
+2 No
+
+28 do_you_use_intraveno Do you use intravenous drugs?
+us_dru
+
+radio, Required
+1 Yes
+2 No
+
+29 waitlist
+
+If you are randomized to the wait-list group, are
+you willing to wait to get any treatments for
+your back until the 3-week waiting period is
+completed?
+
+radio, Required
+
+30 last_name
+
+Last Name
+
+text, Required, Identi er
+
+31
+
+First Name
+
+text, Required, Identi er
+
+32 email
+
+E-mail address
+
+text (email), Required, Identi er
+
+33 phonenumber
+
+Telephone Number
+
+text (phone), Required, Identi er
+
+34 age
+
+Age
+
+dropdown (autocomplete), Required
+
+rst_name
+
+1 Yes
+2 No
+
+21 21
+22 22
+23 23
+24 24
+
+25 25
+26 26
+27 27
+28 28
+29 29
+30 30
+31 31
+32 32
+33 33
+34 34
+35 35
+36 36
+37 37
+38 38
+39 39
+40 40
+41 41
+42 42
+43 43
+44 44
+45 45
+46 46
+47 47
+48 48
+49 49
+50 50
+51 51
+52 52
+53 53
+54 54
+55 55
+56 56
+57 57
+58 58
+59 59
+60 60
+61 61
+
+62 62
+63 63
+64 64
+65 65
+66 66
+67 67
+68 68
+69 69
+70 70
+35 height
+
+Height
+
+text, Required
+
+please enter your height as ft' in''
+
+36 weight
+
+Weight
+
+text (number), Required
+
+please enter your weight in pounds
+
+37 dob
+
+Date of birth
+
+text (date_mdy), Required, Identi er
+
+38 mri_safety
+
+MRI Safety Assessment (Please select the
+following implants or items which you have)
+
+checkbox, Required
+
+Our study involves brain scanning using MRI (magnetic
+resonance imaging). Do you have any of the following
+implants or items within your body as a result of any prior
+or recent medical experience? If you do not wish to specify
+(this is preferred), just check "ONE OR MORE OF THE
+ABOVE".
+
+1
+
+mri_safety___1
+
+Aneurysm clips
+
+2
+
+mri_safety___2
+
+Intracranial
+bypass graft
+clips
+
+3
+
+mri_safety___3
+
+Coronary artery
+bypass clips or
+cardiac valve
+
+4
+
+mri_safety___4
+
+Renal transplant
+clips
+
+5
+
+mri_safety___5
+
+Other vascular
+clips or lters
+
+6
+
+mri_safety___6
+
+surgical staples
+or wire sutures
+
+7
+
+mri_safety___7
+
+Cardiac
+pacemaker or
+pacemaker
+wires
+
+8
+
+mri_safety___8
+
+Middle ear or
+orbital (eye)
+prosthesis
+
+9
+
+mri_safety___9
+
+Arti cial joint or
+limb prosthesis
+
+10 mri_safety___10 Surgical screws,
+nails or rods
+11 mri_safety___11 Breast tissue
+expander
+12 mri_safety___12 Neurostimulator
+13 mri_safety___13 Biostimulator
+
+14 mri_safety___14 Shrapnel/Bullets
+15 mri_safety___15 Hearing aids
+16 mri_safety___16 IUD
+17 mri_safety___17 Braces,
+permanent
+retainers, or
+other dental
+appliances
+18 mri_safety___18 Piercing or
+jewelry that
+cannot be
+removed, OR,
+tattoo in the last
+6 weeks
+19 mri_safety___19 ONE OR MORE
+OF THE ABOVE
+20 mri_safety___20 NONE OF THE
+ABOVE
+39 welder
+
+Have you ever worked as a welder or machinist? radio, Required
+1 Yes
+2 No
+
+40 metaleye
+
+Have you ever had metal removed from your
+eye?
+
+radio, Required
+1 Yes
+2 No
+
+41 contacts
+
+If you need vision correction, do you have
+contacts you can wear?
+
+radio, Required
+1 Yes
+2 No
+
+42 metalbody
+
+Do you have any metal either on or in your
+radio, Required
+body that cannot be removed during the MRI
+1 Yes
+scan? (Examples include aneurysm clips, cardiac
+2 No
+pacemakers, implanted de brillator, electronic
+implants, neurostimulation system,
+magnetically-activated implants, internal
+electrodes, spinal cord stimulator, cochlear
+implants, any type of prosthesis, metallic stent,
+lter or coil, spinal or intraventricular stunt,
+medication patch, surgical or metallic staples,
+bone/joint pin, screw, nail, wire, plate, etc.,
+dentures or partial plates, non-removable body
+piercings)
+
+43 claustrophobic
+
+Do you have claustrophobia?
+
+radio, Required
+1 Yes
+2 No
+
+44 are_you_participating
+_in_a
+
+Are you participating in any other clinical or
+research studies right now?
+
+yesno, Required
+1 Yes
+0 No
+
+45 how_did_you_hear_ab How did you hear about this study
+out_thi
+
+radio
+1 Flyer
+2 Facebook advertisement
+3 Newspaper advertisement
+4 Craigslist
+5 CU Boulder Today
+7 Google advertisement
+6 Other
+
+46 where_was_the_ yer_
+posted
+
+Where was the yer posted?
+
+text
+
+Please specify how you heard about this study
+
+text, Required
+
+48 if_you_have_any_othe
+r_comm2
+
+If you have any other comments you think may
+be relevant to our research team, please note
+them here:
+
+notes
+
+49 eligibility_prescreenin
+g_complete
+
+Section Header: Form Status
+
+dropdown
+
+Show the eld ONLY i
+f:
+[how_did_you_hear_a
+bout_thi] = '1'
+47 please_specify_how_y
+ou_hea
+Show the eld ONLY i
+f:
+[how_did_you_hear_a
+bout_thi] = '6'
+
+Complete?
+
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Admin (admin)
+
+50 how_similar_bladder_
+pai_t1
+
+T1: How similar bladder pain to your pain?
+
+radio
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+Custom alignment: RH
+51 how_similar_bladder_
+pai_t2
+
+T2: How similar bladder pain to your pain?
+
+radio
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+Custom alignment: RH
+52 consent_to_recontact_ Consent to recontact for future studies?
+for_f
+
+yesno
+1 Yes
+0 No
+Custom alignment: RH
+
+53 consent_recordings_e
+ducational_purposes
+
+Consent to use psychotherapy recordings for
+educational purposes?
+
+yesno
+1 Yes
+0 No
+Custom alignment: RH
+
+54 study_alloc
+
+study allocation
+
+radio
+1 Placebo vs. waitlist study
+2 Psychotherapy vs. waitlist study
+
+55 tx_vs_waitlist_alloc
+
+treatment vs. waitlist allocation
+
+radio
+1 treatment
+2 waitlist
+
+56 age_decile
+
+age decile
+
+radio
+1 20s
+2 30s
+3 40s
+4 50s
+5 60s or 70s
+
+57 pain_decile
+
+pain decile. Their pain on BPI "pain on average"
+at T1 assessment was in which range:
+
+radio
+1 0-3
+2 4-5
+3 6-7
+4 8 - 10
+
+58 eligibility_session_dat
+e
+
+Eligibility Session Date
+
+text (date_mdy)
+
+59 baseline_date
+
+Date of Baseline
+
+text (date_mdy)
+
+60 stop_peri_t1
+
+Stop Peri-T1 surveys?
+
+yesno
+1 Yes
+0 No
+
+61 treatment_date
+
+Date of Treatment
+
+text (date_mdy)
+
+62 stop_daily
+
+Stop Weekly Treatment Surveys?
+
+yesno
+
+really, this eld should be called 'stop_weekly' but not worth
+the trouble of renaming all the logic
+
+1 Yes
+0 No
+
+63 t2_date
+
+T2 Date
+
+text (date_mdy)
+
+64 stop_peri_t2
+
+Stop Peri-T2 surveys?
+
+yesno
+1 Yes
+0 No
+
+65 heel_to_bladder_edge
+_dista
+
+heel_to_bladder_edge_distance
+
+text (number)
+Field Annotation: inches
+
+66 repressed_emotion
+
+How much repressed emotion did this patient
+have when they began treatment, knowing
+what you know about them now?
+To be rated by therapist at end of treatment
+
+radio
+0
+
+0 - None
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10 - Extremely repressed
+emotions
+67 admin_complete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+TLFB (tlfb)
+
+68 alcohol_day_14
+
+Section Header: Alcohol
+
+text (number), Required
+
+Alcohol - Day -14
+69 alcohol_day_13
+
+Alcohol - Day -13
+
+text (number), Required
+
+70 alcohol_day_12
+
+Alcohol - Day -12
+
+text (number), Required
+
+71 alcohol_day_11
+
+Alcohol - Day -11
+
+text (number), Required
+
+72 alcohol_day_10
+
+Alcohol - Day -10
+
+text (number), Required
+
+73 alcohol_day_9
+
+Alcohol - Day -9
+
+text (number), Required
+
+74 alcohol_day_8
+
+Alcohol - Day -8
+
+text (number), Required
+
+75 alcohol_day_7
+
+Alcohol - Day -7
+
+text (number), Required
+
+76 alcohol_day_6
+
+Alcohol - Day -6
+
+text (number), Required
+
+77 alcohol_day_5
+
+Alcohol - Day -5
+
+text (number), Required
+
+78 alcohol_day_4
+
+Alcohol - Day -4
+
+text (number), Required
+
+79 alcohol_day_3
+
+Alcohol - Day -3
+
+text (number), Required
+
+80 alcohol_day_2
+
+Alcohol - Day -2
+
+text (number), Required
+
+81 alcohol_day_1
+
+Alcohol - Day -1
+
+text (number), Required
+
+82 cannabis_day_14
+
+Section Header: Cannabis
+
+text (number), Required
+
+Cannabis - Day -14
+83 cannabis_day_13
+
+Cannabis - Day -13
+
+text (number), Required
+
+84 cannabis_day_12
+
+Cannabis - Day -12
+
+text (number), Required
+
+85 cannabis_day_11
+
+Cannabis - Day -11
+
+text (number), Required
+
+86 cannabis_day_10
+
+Cannabis - Day -10
+
+text (number), Required
+
+87 cannabis_day_9
+
+Cannabis - Day -9
+
+text (number), Required
+
+88 cannabis_day_8
+
+Cannabis - Day -8
+
+text (number), Required
+
+89 cannabis_day_7
+
+Cannabis - Day -7
+
+text (number), Required
+
+90 cannabis_day_6
+
+Cannabis - Day -6
+
+text (number), Required
+
+91 cannabis_day_5
+
+Cannabis - Day -5
+
+text (number), Required
+
+92 cannabis_day_4
+
+Cannabis - Day -4
+
+text (number), Required
+
+93 cannabis_day_3
+
+Cannabis - Day -3
+
+text (number), Required
+
+94 cannabis_day_2
+
+Cannabis - Day -2
+
+text (number), Required
+
+95 cannabis_day_1
+
+Cannabis - Day -1
+
+text (number), Required
+
+96 opioid_day_14
+
+Section Header: Opioids
+
+text (number), Required
+
+Opioid - Day -14
+97 opioid_day_13
+
+Opioid - Day -13
+
+text (number), Required
+
+98 opioid_day_12
+
+Opioid - Day -12
+
+text (number), Required
+
+99 opioid_day_11
+
+Opioid - Day -11
+
+text (number), Required
+
+100 opioid_day_10
+
+Opioid - Day -10
+
+text (number), Required
+
+101 opioid_day_9
+
+Opioid - Day -9
+
+text (number), Required
+
+102 opioid_day_8
+
+Opioid - Day -8
+
+text (number), Required
+
+103 opioid_day_7
+
+Opioid - Day -7
+
+text (number), Required
+
+104 opioid_day_6
+
+Opioid - Day -6
+
+text (number), Required
+
+105 opioid_day_5
+
+Opioid - Day -5
+
+text (number), Required
+
+106 opioid_day_4
+
+Opioid - Day -4
+
+text (number), Required
+
+107 opioid_day_3
+
+Opioid - Day -3
+
+text (number), Required
+
+108 opioid_day_2
+
+Opioid - Day -2
+
+text (number), Required
+
+109 opioid_day_1
+
+Opioid - Day -1
+
+text (number), Required
+
+110 tlfb_complete
+
+Section Header: Form Status
+
+dropdown
+
+Complete?
+
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+BPI-SF last week (bpisf_last_week)
+
+111 pain_worst
+
+Section Header: Please rate your pain by choosing the one
+number that best describes your pain. 0 = NO PAIN AT ALL
+10 = PAIN AS BAD AS YOU CAN IMAGINE
+
+at its WORST in the LAST WEEK:
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+112 pain_least
+
+at its LEAST in the LAST WEEK:
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+113 pain_avg
+
+on average:
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+
+114 pain_now
+
+right now:
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+115 general_activity
+
+Section Header: Choose the one number that describes
+how, DURING THE PAST WEEK, pain has interfered with each
+of the below. 0 = DOES NOT INTERFERE 10 = COMPLETELY
+INTERFERES
+
+General activity
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+116 mood
+
+Mood
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+
+117 walking_ability
+
+Walking ability
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+118 normal_work_include
+s_both
+
+Normal work (includes both work outside the
+home and housework)
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+119 relations_with_other_
+peopl
+
+Relations with other people
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+
+120 sleep_interference
+
+Sleep
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+121 enjoyment_of_life
+
+Enjoyment of life
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+122 bpisf_last_week_comp Section Header: Form Status
+lete
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+OLBPDQ (olbpdq)
+
+123 pain_intensity
+
+Section Header: This questionnaire has been designed to
+give us information as to how your back or leg pain is
+a ecting your ability to manage everyday life. Please answer
+by choosing the answer to each question which best applies
+to you.
+
+Pain intensity
+
+radio, Required
+1 I have no pain at the moment
+2 The pain is very mild at the
+moment
+3 The pain is moderate at the
+moment
+4 The pain is fairly severe at the
+moment
+5 The pain is very severe at the
+moment
+6 The pain is the worst imaginable at
+the moment
+
+124 personal_care_washin Personal care (washing, dressing etc)
+g_dres
+
+radio, Required
+1 I can look after myself normally
+without causing extra pain
+2 I can look after myself normally but
+it causes extra pain
+3 It is painful to look after myself and
+I am slow and careful
+4 I need some help but manage
+most of my personal care
+5 I need help every day in most
+aspects of self-care
+6 I do not get dressed, I wash with
+di culty and stay in bed
+
+125 lifting
+
+Lifting
+
+radio, Required
+1 I can lift heavy weights without
+extra pain
+2 I can lift heavy weights but it gives
+extra pain
+3 Pain prevents me from lifting
+heavy weights o the oor, but I
+can manage if they are
+conveniently placed eg. on a table
+4 Pain prevents me from lifting
+heavy weights, but I can manage
+light to medium weights if they are
+conveniently positioned
+5 I can lift very light weights
+6 I cannot lift or carry anything at all
+
+126 walking
+
+Walking
+
+radio, Required
+1 Pain does not prevent me walking
+any distance
+2 Pain prevents me from walking
+more than 1 mile
+3 Pain prevents me from walking
+more than 1/2 mile
+4 Pain prevents me from walking
+more than 100 yards
+5 I can only walk using a stick or
+crutches
+6 I am in bed most of the time
+
+127 sitting
+
+Sitting
+
+radio, Required
+1 I can sit in any chair as long as I like
+2 I can only sit in my favorite chair as
+long as I like
+3 Pain prevents me sitting more than
+one hour
+4 Pain prevents me from sitting more
+than 30 minutes
+5 Pain prevents me from sitting more
+than 10 minutes
+6 Pain prevents me from sitting at all
+
+128 standing
+
+Standing
+
+radio, Required
+1 I can stand as long as I want
+without extra pain
+2 I can stand as long as I want but it
+gives me extra pain
+3 Pain prevents me from standing
+for more than 1 hour
+4 Pain prevents me from standing
+for more than 30 minutes
+5 Pain prevents me from standing
+for more than 10 minutes
+6 Pain prevents me from standing at
+all
+
+129 sleeping
+
+Sleeping
+
+radio, Required
+1 My sleep is never disturbed by pain
+2 My sleep is occasionally disturbed
+by pain
+3 Because of pain I have less than 6
+hours sleep
+4 Because of pain I have less than 4
+hours sleep
+5 Because of pain I have less than 2
+hours sleep
+6 Pain prevents me from sleeping at
+all
+
+130 sex_life
+
+Sex life
+
+radio, Required
+1 My sex life is normal and causes no
+extra pain
+2 My sex life is normal but causes
+some extra pain
+3 My sex life is nearly normal but is
+very painful
+4 My sex life is severely restricted by
+pain
+5 My sex life is nearly absent
+because of pain
+6 Pain prevents any sex life at all
+
+131 social_life
+
+Social life
+
+radio, Required
+1 My social life is normal and gives
+me no extra pain
+2 My social life is normal but
+increases the degree of pain
+3 Pain has no signi cant e ect on
+my social life apart from limiting
+my more energetic interests eg,
+sport
+4 Pain has restricted my social life
+and I do not go out as often
+5 Pain has restricted my social life to
+my home
+6 I have no social life because of pain
+
+132 travelling
+
+Travelling
+
+radio, Required
+1 I can travel anywhere without pain
+2 I can travel anywhere but it gives
+me extra pain
+3 Pain is bad but I manage journeys
+over two hours
+4 Pain restricts me to journeys of
+less than one hour
+5 Pain restricts me to short
+necessary journeys under 30
+minutes
+6 Pain prevents me from travelling
+except to receive treatment
+
+133 olbpdq_complete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+PROMIS_4 +CEQ (promis_4_ceq)
+
+134 promisdepression1
+
+Section Header: In the past 7 days...
+
+I felt worthless
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+
+135 promisdepression2
+
+I felt helpless
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+
+136 promisdepression3
+
+I felt depressed
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+
+137 promisdepression4
+
+I felt hopeless
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+
+138 i_felt_like_a_failure
+
+I felt like a failure
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+
+139 i_felt_unhappy
+
+I felt unhappy
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+
+140 i_felt_that_i_had_nothi I felt that I had nothing to look forward to
+ng
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+
+141 i_felt_that_nothing_co
+uld
+
+I felt that nothing could cheer me up
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+
+142 promissleepdisturban
+ce1
+
+Section Header: Sleep
+
+In the past 7 days, my sleep quality was
+
+radio (Matrix), Required
+1 Very poor
+2 Poor
+3 Fair
+4 Good
+5 Very good
+
+143 promissleepdisturban
+ce2
+
+Section Header: In the past 7 days...
+
+My sleep was refreshing
+
+radio (Matrix), Required
+1 Not at all
+2 A little bit
+3 Somewhat
+4 Quite a bit
+5 Very much
+
+144 promissleepdisturban
+ce3
+
+I had a problem with my sleep
+
+radio (Matrix), Required
+1 Not at all
+2 A little bit
+3 Somewhat
+4 Quite a bit
+5 Very much
+
+145 promissleepdisturban
+ce4
+
+I had di culty falling alseep
+
+radio (Matrix), Required
+1 Not at all
+2 A little bit
+3 Somewhat
+4 Quite a bit
+5 Very much
+
+146 my_sleep_was_restles
+s
+
+My sleep was restless
+
+radio (Matrix), Required
+1 Not at all
+2 A little bit
+3 Somewhat
+4 Quite a bit
+5 Very much
+
+147 i_tried_hard_to_get_to
+_sle
+
+I tried hard to get to sleep
+
+radio (Matrix), Required
+1 Not at all
+2 A little bit
+3 Somewhat
+4 Quite a bit
+5 Very much
+
+148 i_worried_about_not_
+being
+
+I worried about not being able to fall asleep
+
+radio (Matrix), Required
+1 Not at all
+2 A little bit
+3 Somewhat
+4 Quite a bit
+5 Very much
+
+149 i_was_satis ed_with_
+my_sl
+
+I was satis ed with my sleep
+
+radio (Matrix), Required
+1 Not at all
+2 A little bit
+3 Somewhat
+4 Quite a bit
+5 Very much
+
+150 edang03
+
+Section Header: In the past 7 days...
+
+I was irritated more than people knew
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+151 edang09
+
+I felt angry
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+152 edang15
+
+I felt like I was ready to explode
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+153 edang30
+
+I was grouchy
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+154 edang35
+
+I felt annoyed
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+155 i_felt_fearful
+
+Section Header: In the past 7 days...
+
+I felt fearful
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+156 i_found_it_hard_to_fo
+cus_o
+
+I found it hard to focus on anything other than
+my anxiety
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+157 my_worries_overwhel
+med_me
+
+My worries overwhelmed me
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+158 i_felt_uneasy
+
+I felt uneasy
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+159 i_felt_nervous
+
+I felt nervous
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+160 i_felt_like_i_needed_h
+elp
+
+I felt like I needed help for my anxiety
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+161 i_felt_anxious
+
+I felt anxious
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+162 i_felt_tense
+
+I felt tense
+
+radio (Matrix), Required
+1 Never
+2 Rarely
+3 Sometimes
+4 Often
+5 Always
+
+163 ceqset1_2
+
+Section Header: Expectations
+
+At this point, how successful do you think this
+treatment will be in reducing your back pain?
+164 promis_4_ceq_comple Section Header: Form Status
+te
+Complete?
+
+slider, Required
+Slider labels: not at all successful,
+somewhat successful, very successful
+Custom alignment: RH
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Panas 10 (panas_10)
+
+165 panas10upset
+
+Section Header: The following scale consists of a number of
+words that describe di erent feelings and emotions. Using
+the scale below, indicate for each word to what extent it
+describes how you have felt in the PAST WEEK.
+
+Upset
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+166 panas10ashamed
+
+Ashamed
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+167 panas10nervous
+
+Nervous
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+168 panas10attentive
+
+Attentive
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+169 panas10active
+
+Active
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+170 panas10alert
+
+Alert
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+171 panas10inspired
+
+Inspired
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+172 panas10determined
+
+Determined
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+173 panas10hostile
+
+Hostile
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+174 panas10afraid
+
+Afraid
+
+radio (Matrix), Required
+1 Very slightly or not at all
+2 A little
+3 Moderately
+4 Quite a bit
+5 Extremely
+
+175 panas_10_complete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+176 pcs1
+
+PCS+last item from IPQ (pcslast_item_from_ipq)
+Section Header: Everyone experiences painful situations at
+some point in their lives. Such experiences may include
+headaches, tooth pain, joint or muscle pain. People are
+often exposed to situations that may cause pain such as
+illness, injury, dental procedures or surgery. We are
+interested in the types of thoughts and feelings that you
+have when you are in pain. Listed below are thirteen
+statements describing di erent thoughts and feelings that
+may be associated with pain. Using the following scale,
+please indicate the degree to which you have these thoughts
+and feelings when you are experiencing pain.
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+I worry all the time about whether the pain will
+end
+177 pcs2
+
+I feel I can't go on
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+178 pcs3
+
+It's terrible and I think it's never going to get any radio (Matrix), Required
+better
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+179 pcs4
+
+It's awful and I feel that it overwhelms me
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+180 pcs5
+
+I feel I can't stand it anymore
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+181 pcs6
+
+I become afraid that the pain will get worse
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+182 pcs7
+
+I keep thinking of other painful events
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+183 pcs9
+
+I anxiously want the pain to go away
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+184 pcs10
+
+I can't seem to keep it out of my mind
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+185 pcs11
+
+I keep thinking about how much it hurts
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+186 pcs12
+
+I keep thinking about how badly I want the pain
+to stop
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+187 pcs13
+
+There's nothing I can do to reduce the intensity
+of the pain
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+188 pcs14
+
+I wonder whether something serious may
+happen
+
+radio (Matrix), Required
+0 Not at all
+1 To a slight degree
+2 To a moderate degree
+3 To a great degree
+4 All the time
+
+189 st_most_important
+
+Section Header: Please list in rank-order the three most
+important factors that you believe caused your illness. The
+most important causes for me:
+
+text, Required
+
+1st Most Important:
+190 nd_most_important
+
+2nd Most Important:
+
+text, Required
+
+191 rd_most_important
+
+3rd Most Important:
+
+text, Required
+
+192 pcslast_item_from_ip
+q_complete
+
+Section Header: Form Status
+
+dropdown
+
+Complete?
+
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+TSK-11 + SOPA emo 2 items (tsk11_sopa_emo_2_items)
+
+193 tsk11_1
+
+I'm afraid that I might injure myself if I exercise
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+194 tsk11_2
+
+If I were to try to overcome it, my pain would
+increase
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+195 tsk11_3
+
+My body is telling me I have something
+dangerously wrong
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+196 tsk11_4
+
+People aren't taking my medical condition
+seriously enough
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+197 tsk11_5
+
+My accident/injury/problem has put my body at
+risk for the rest of my life
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+198 tsk11_6
+
+Pain always means I have injured my body
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+199 tsk11_7
+
+Simply being careful that I do not make any
+unnecessary movements is the safest thing I
+can do to prevent my pain from worsening
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+200 tsk11_8
+
+I wouldn't have this much pain if there weren't
+something potentially dangerous going on in
+my body
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+201 tsk11_9
+
+Pain lets me know when to stop exercising so
+that I don't injure myself
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+202 tsk11_10
+
+I can't do all the things normal people do
+because it's too easy for me to get injured
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+203 tsk11_11
+
+No one should have to exercise when he/she is
+in pain
+
+radio (Matrix), Required
+1 strongly disagree
+2 disagree
+3 agree
+4 strongly agree
+
+204 sopa_emo1
+
+There is a connection between my emotions
+and my pain level
+
+radio (Matrix), Required
+1 Very untrue for me
+2 Somewhat untrue for me
+3 Neither true nor untrue for me
+4 Somewhat true for me
+5 Very true for me
+
+205 sopa_emo2
+
+Stress in my life increases the pain I feel
+
+radio (Matrix), Required
+1 Very untrue for me
+2 Somewhat untrue for me
+3 Neither true nor untrue for me
+4 Somewhat true for me
+5 Very true for me
+
+206 tsk11_sopa_emo_2_ite Section Header: Form Status
+ms_complete
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Patient Global Impression of Change Scale (patient_global_impression_of_change_scale)
+
+207 pgics
+
+Since beginning this treatment, how would you
+describe the change (if any) in ACTIVITY
+LIMITATIONS, SYMPTOMS, EMOTIONS, and
+OVERALL QUALITY OF LIFE, related to your back
+pain?
+
+dropdown, Required
+1 No change (or condition has gotten
+worse)
+2 Almost the same, or hardly no
+change at all
+3 A little better, but no noticeable
+change
+4 Somewhat better, but the change
+has not made any real di erence
+5 Moderately better, and a slight but
+noticeable change
+6 Better and a de nite improvement
+that has made a real and
+worthwhile di erence
+7 A great deal better and
+considerable improvement that
+has made all the di erence
+
+208 patient_global_impres Section Header: Form Status
+sion_of_change_scale_ Complete?
+complete
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Treatment Satisfaction Survey (treatment_satisfaction_survey)
+
+209 treatmentsatisfaction
+1
+
+Section Header: Please answer the below questions about
+your satisfaction with the treatment.
+
+How satis ed are you with the treatment you
+received?
+
+slider, Required
+Slider labels: not satis ed, somewhat
+satis ed, very satis ed
+Custom alignment: RH
+
+210 treatmentsatisfaction
+2
+
+How con dent would you be in recommending
+this treatment to a friend?
+
+slider, Required
+Slider labels: not at all, somewhat, very
+Custom alignment: RH
+
+211 treatment_satisfactio
+n_survey_complete
+
+Section Header: Form Status
+
+dropdown
+
+Complete?
+
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Demographics (demographics)
+
+212 ethnicity
+
+Race
+
+radio, Required
+1 American Indian or Alaskan Native
+2 Asian or Paci c Islander
+3 Black (not of Hispanic Origin)
+4 White (not of Hispanic Origin)
+5 Other or Unknown
+
+213 hispanic
+
+Hispanic?
+
+yesno, Required
+1 Yes
+0 No
+
+214 employment_status
+
+Current employment status
+
+radio, Required
+1 employed full time (30+ hrs/wk)
+2 employed part time (5 - 30 hrs/wk)
+3 unemployed or lightly employed (<
+5 hrs/wk)
+
+215 education
+
+Education
+
+radio, Required
+1 High school or less
+2 Some college or vocational school
+3 College graduate
+
+216 married_or_living_as_
+marri
+
+Married or living as married?
+
+yesno, Required
+1 Yes
+0 No
+
+217 sses_ladder
+
+Think of this ladder as representing where
+people stand in the United States.
+At the top of the ladder are the people who are
+the best o - those who have the most money,
+the most education and the most respected
+jobs. At the bottom are the people who are the
+worst o - who have the least money, least
+education and the least respected jobs or no
+job.
+The higher up you are on this ladder, the closer
+you are to the people at the very top; the lower
+you are, the closer you are to the people at the
+bottom.
+Where would you place yourself on this ladder?
+
+descriptive
+
+218 sses
+
+radio, Required
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+Custom alignment: LH
+219 zipcode1
+
+Zip code
+
+text (number, Min: 0, Max: 99999),
+Identi er
+
+220 handedness
+
+Which is your dominant hand?
+
+radio, Required
+1 right
+2 left
+3 both
+
+221 exercise
+
+How much exercise do you usually get?
+
+radio
+1 Almost none
+2 1 hour/week
+3 3 hours/week
+4 7 hours/week
+5 14+ hours/week
+
+222 how_much_pain_do_y
+ou_have
+
+How much pain do you have in body parts
+other than the back?
+
+radio
+1 none
+2 a little
+3 a moderate amount
+4 a lot
+
+223 demographics_compl
+ete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+BMQ-Speci c modi ed (bmqspeci c_modi ed)
+
+224 this_treatment_is_nec
+essar
+
+Section Header: Please indicate the extent to which you
+agree or disagree with each statement by ticking the
+appropriate box. There are no right or wrong answers. We
+are interested in your personal views.
+
+This treatment is necessary to reduce my pain
+
+radio (Matrix), Required
+1 strongly agree
+2 agree
+3 uncertain
+4 disagree
+5 strongly disagree
+
+225 i_would_experience_
+more_se
+
+I would experience more severe pain without
+this treatment
+
+radio (Matrix), Required
+1 strongly agree
+2 agree
+3 uncertain
+4 disagree
+5 strongly disagree
+
+226 receiving_this_treatm
+ent_m
+
+Receiving this treatment makes me less anxious radio (Matrix), Required
+about my pain
+1 strongly agree
+2 agree
+3 uncertain
+4 disagree
+5 strongly disagree
+
+227 this_treatment_will_pr This treatment will protect me from feeling pain
+otec
+
+radio (Matrix), Required
+1 strongly agree
+2 agree
+3 uncertain
+4 disagree
+5 strongly disagree
+
+228 bmqspeci c_modi ed
+_complete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Back Pain Injection Treatment History (back_pain_injection_treatment_history)
+
+229 injectionnumber
+
+How many previous injection-based treatments
+have you received for your back pain?
+
+dropdown (autocomplete), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+230 injectionhistory1
+
+Section Header: For each injection-based treatment, please
+write the approximate date and how successful you think
+the treatment was on a 1-10 scale, where 1 = not successful
+at all, and 10 = very successful.
+
+text
+
+Please rate the treatment success
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+Show the eld ONLY i
+f:
+[injectionnumber] =
+Date of rst
+'1' or [injectionnumbe Please enter as month/year
+r] = '2' or [injectionnu
+mber] = '3' or [injectio
+nnumber] = '4' or [inje
+ctionnumber] = '5' or
+[injectionnumber] =
+'6' or [injectionnumbe
+r] = '7' or [injectionnu
+mber] = '8' or [injectio
+nnumber] = '9' or [inje
+ctionnumber] = '10'
+231 treatmentsuccess1
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'1' or [injectionnumbe
+r] = '2' or [injectionnu
+mber] = '3' or [injectio
+nnumber] = '5' or [inje
+ctionnumber] = '4' or
+[injectionnumber] =
+'6' or [injectionnumbe
+r] = '7' or [injectionnu
+mber] = '8' or [injectio
+nnumber] = '9' or [inje
+ctionnumber] = '10' a
+nd [injectionhistory1]
+<> ''
+
+232 injectionhistory2
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'2' or [injectionnumbe
+r] = '3' or [injectionnu
+mber] = '4' or [injectio
+nnumber] = '5' or [inje
+ctionnumber] = '6' or
+[injectionnumber] =
+'7' or [injectionnumbe
+r] = '8' or [injectionnu
+mber] = '9' or [injectio
+nnumber] = '10'
+233 treatmentsuccess2
+
+Date of second
+
+Please rate the treatment success
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+Date of third
+
+text
+
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'2' or [injectionnumbe
+r] = '3' or [injectionnu
+mber] = '4' or [injectio
+nnumber] = '5' or [inje
+ctionnumber] = '6' or
+[injectionnumber] =
+'7' or [injectionnumbe
+r] = '8' or [injectionnu
+mber] = '9' or [injectio
+nnumber] = '10' and [i
+njectionhistory2] <> ''
+234 injectionhistory3
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'3' or [injectionnumbe
+r] = '4' or [injectionnu
+mber] = '5' or [injectio
+nnumber] = '6' or [inje
+ctionnumber] = '7' or
+[injectionnumber] =
+'8' or [injectionnumbe
+r] = '9' or [injectionnu
+mber] = '10'
+
+text
+
+Please enter as month/year
+
+Please enter as month/year
+
+235 treatmentsuccess3
+
+Please rate the treatment success
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+Date of fourth
+
+text
+
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'3' or [injectionnumbe
+r] = '4' or [injectionnu
+mber] = '5' or [injectio
+nnumber] = '6' or [inje
+ctionnumber] = '7' or
+[injectionnumber] =
+'8' or [injectionnumbe
+r] = '9' or [injectionnu
+mber] = '10' and [injec
+tionhistory3] <> ''
+236 injectionhistory4
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'4' or [injectionnumbe
+r] = '5' or [injectionnu
+mber] = '6' or [injectio
+nnumber] = '7' or [inje
+ctionnumber] = '8' or
+[injectionnumber] =
+'9' or [injectionnumbe
+r] = '10'
+237 treatmentsuccess4
+
+Please enter as month/year
+
+Please rate the treatment success
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+Date of fth
+
+text
+
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'4' or [injectionnumbe
+r] = '5' or [injectionnu
+mber] = '6' or [injectio
+nnumber] = '7' or [inje
+ctionnumber] = '8' or
+[injectionnumber] =
+'9' or [injectionnumbe
+r] = '10' and [injection
+history4] <> ''
+238 injectionhistory5
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'5' or [injectionnumbe
+r] = '6' or [injectionnu
+mber] = '7' or [injectio
+nnumber] = '8' or [inje
+ctionnumber] = '9' or
+[injectionnumber] = '1
+0'
+
+Please enter as month/year
+
+239 treatmentsuccess5
+
+Please rate the treatment success
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+Date of sixth
+
+text
+
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'5' or [injectionnumbe
+r] = '6' or [injectionnu
+mber] = '7' or [injectio
+nnumber] = '8' or [inje
+ctionnumber] = '9' or
+[injectionnumber] = '1
+0' and [injectionhistor
+y5] <> ''
+240 injectionhistory6
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'6' or [injectionnumbe
+r] = '7' or [injectionnu
+mber] = '8' or [injectio
+nnumber] = '9' or [inje
+ctionnumber] = '10'
+241 treatmentsuccess6
+
+Please enter as month/year
+
+Please rate the treatment success
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+Date of seventh
+
+text
+
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'6' or [injectionnumbe
+r] = '7' or [injectionnu
+mber] = '8' or [injectio
+nnumber] = '9' or [inje
+ctionnumber] = '10' a
+nd [injectionhistory6]
+<> ''
+242 injectionhistory7
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'7' or [injectionnumbe
+r] = '8' or [injectionnu
+mber] = '9' or [injectio
+nnumber] = '10'
+243 treatmentsuccess7
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'7' or [injectionnumbe
+r] = '8' or [injectionnu
+mber] = '9' or [injectio
+nnumber] = '10' and [i
+njectionhistory7] <> ''
+
+Please enter as month/year
+
+Please rate the treatment success
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+244 injectionhistory8
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'8' or [injectionnumbe
+r] = '9' or [injectionnu
+mber] = '10'
+245 treatmentsuccess8
+
+Date of eigth
+
+Please rate the treatment success
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+Date of ninth
+
+text
+
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'8' or [injectionnumbe
+r] = '9' or [injectionnu
+mber] = '10' and [injec
+tionhistory8] <> ''
+246 injectionhistory9
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'9' or [injectionnumbe
+r] = '10'
+247 treatmentsuccess9
+
+Please enter as month/year
+
+Please rate the treatment success
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+Date of tenth
+
+text
+
+Show the eld ONLY i
+f:
+[injectionnumber] =
+'9' or [injectionnumbe
+r] = '10' and [injection
+history9] <> ''
+248 injectionhistory10
+Show the eld ONLY i
+f:
+[injectionnumber] = '1
+0'
+249 treatmentsuccess10
+
+text
+
+Please enter as month/year
+
+Please enter as month/year
+
+Please rate the treatment success
+
+Show the eld ONLY i
+f:
+[injectionnumber] = '1
+0' and [injectionhistor
+y10] <> ''
+250 back_pain_injection_tr Section Header: Form Status
+eatment_history_com Complete?
+plete
+
+slider
+Slider labels: not at all, somewhat
+successful, very successful
+Custom alignment: RH
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Lotr (lotr)
+
+251 lotr1
+
+Section Header: Please be as honest and accurate as you
+can throughout. Try not to let your response to one
+statement in uence your responses to other statements.
+There are no "correct" or "incorrect" answers. Answer
+according to your own feelings, rather than how you think
+"most people" would answer.
+
+In uncertain times, I usually expect the best.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+252 lotr2
+
+It's easy for me to relax.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+253 lotr3
+
+If something can go wrong for me, it will.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+254 lotr4
+
+I'm always optimistic about my future.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+255 lotr5
+
+I enjoy my friends a lot.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+256 lotr6
+
+It's important for me to keep busy.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+257 lotr7
+
+I hardly ever expect things to go my way.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+258 lotr8
+
+I don't get upset too easily.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+259 lotr9
+
+I rarely count on good things happening to me.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+260 lotr10
+
+Overall, I expect more good things to happen to
+me than bad.
+
+radio (Matrix), Required
+1 I agree a lot
+2 I agree a little
+3 I neither agree or disagree
+4 I DISagree a little
+5 I DISagree a lot
+
+261 lotr_complete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Fear of Pain Questionnaire (fear_of_pain_questionnaire)
+
+262 being_in_an_automob Section Header: The items listed below describe painful
+experiences. Please look at each item and think about how
+ile_acc
+
+FEARFUL you are of experiencing the PAIN associated with
+each item. If you have never experienced the PAIN of a
+particular item, please answer on the basis of how FEARFUL
+you expect you would be if you had such an experience.
+Choose one rating per item to rate your FEAR OF PAIN in
+relation to each event.
+
+Being in an automobile accident
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+263 biting_your_tongue_w
+hile_e
+
+Biting your tongue while eating
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+264 breaking_your_arm
+
+Breaking your arm
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+265 utting_your_tongue_li
+cking
+
+Cutting your tongue licking an envelope
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+266 having_a_heavy_objec
+t_hit
+
+Having a heavy object hit you in the head
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+267 breaking_your_leg
+
+Breaking your leg
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+268 hitting_a_sensitive_bo
+ne_i
+
+Hitting a sensitive bone in your elbow-your
+"funny bone"
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+269 having_a_blood_samp Having a blood sample drawn with a
+le_draw
+hypodermic needle
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+270 having_someone_sla
+m_a_heav
+
+Having someone slam a heavy car door on your
+hand
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+271 falling_down_a_ ight_
+of_c
+
+Falling down a ight of concrete stairs
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+272 receiving_an_injection
+_in
+
+Receiving an injection in your arm
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+273 burning_your_ ngers_ Burning your ngers with a match
+with
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+274 breaking_your_neck
+
+Breaking your neck
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+275 receiving_an_injection
+_in2
+
+Receiving an injection in your hip/buttocks
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+276 having_a_deep_splint
+er_in
+
+Having a deep splinter in the sole of your foot
+probed and removed with tweezers
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+277 having_an_eye_doctor Having an eye doctor remove a foreign particle
+_remov
+stuck in your eye
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+278 receiving_an_injection
+_in3
+
+Receiving an injection in your mouth
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+279 being_burned_on_you Being burned on your face by a lit cigarette
+r_face
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+280 getting_a_paper_cut_o Getting a paper-cut on your nger
+n_you
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+281 receiving_stitches_in_
+your
+
+Receiving stitches in your lip
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+282 having_a_foot_doctor
+_remov
+
+Having a foot doctor remove a wart from your
+foot with a sharp instrument
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+283 cutting_yourself_while Cutting yourself while shaving with a sharp
+_sha
+razor
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+284 gulping_a_hot_drink_
+before
+
+Gulping a hot drink before it has cooled
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+285 getting_strong_soap_i
+n_bot
+
+Getting strong soap in both your eyes while
+bathing or showering
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+286 having_a_terminal_illn Having a terminal illness that causes you daily
+ess
+pain
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+287 having_a_tooth_pulle
+d
+
+Having a tooth pulled
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+288 vomiting_repeatedly_
+becaus
+
+Vomiting repeatedly because of food poisoning
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+289 having_sand_or_dust_
+blow_i
+
+Having sand or dust blow into your eyes
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+290 having_one_of_your_t
+eeth_d
+
+Having one of your teeth drilled
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+291 having_a_muscle_cra
+mp
+
+Having a muscle cramp
+
+radio (Matrix), Required
+1 Not at All
+2 A LIttle
+3 A Fair Amount
+4 Very Much
+5 Extreme
+
+292 fear_of_pain_question Section Header: Form Status
+naire_complete
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Generalized Self-E
+
+cacy Scale (generalized_selfe cacy_scale)
+
+293 i_can_always_manage
+_to_sol
+
+Section Header: Read each sentence carefully and choose
+the answer that best describes you.
+
+I can always manage to solve di cult problems
+if I try hard enough.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+294 if_someone_opposes_ If someone opposes me, I can nd the means
+me_i_ca
+and ways to get what I want.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+295 it_is_easy_for_me_to_
+stick
+
+It is easy for me to stick to my aims and
+accomplish my goals.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+296 i_am_con dent_that_i
+_coul
+
+I am con dent that I could deal e ciently with
+unexpected events.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+297 thanks_to_my_resourc Thanks to my resourcefulness, I know how to
+efulne
+handle unforeseen situations.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+298 i_can_solve_most_pro
+blems
+
+I can solve most problems if I invest the
+necessary e ort.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+299 i_can_remain_calm_w
+hen_fac
+
+I can remain calm when facing di culties
+because I can rely on my coping abilities.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+300 when_i_am_confronte
+d_with
+
+When I am confronted with a problem, I can
+usually nd several solutions.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+301 if_i_am_in_trouble_i_c
+an_u
+
+If I am in trouble, I can usually think of a
+solution.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+302 i_can_usually_handle_
+whate
+
+I can usually handle whatever comes my way.
+
+radio (Matrix), Required
+1 Not at all true
+2 Hardly true
+3 Moderately true
+4 Exactly true
+
+303 generalized_selfe ca
+cy_scale_complete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Mindful Attention Awareness Scale (mindful_attention_awareness_scale)
+
+304 i_could_be_experienci
+ng_so
+
+Section Header: Below is a collection of statements about
+your everyday experience. Using the scale below, please
+indicate how frequently or infrequently you currently have
+each experience. Please answer according to what really
+re ects your experience rather than what you think your
+experience should be. Please treat each item separately
+from every other item.
+
+I could be experiencing some emotion and not
+be conscious of it until some time later.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+305 i_break_or_spill_thing
+s_be
+
+I break or spill things because of carelessness,
+not paying attention, or thinking of something
+else.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+306 i_ nd_it_di cult_to_st
+a
+
+I nd it di cult to stay focused on what's
+happening in the present.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+307 i_tend_to_walk_quickl
+y_to
+
+I tend to walk quickly to get where I'm going
+without paying attention to what I experience
+along the way.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+308 i_tend_not_to_notice_f I tend not to notice feelings of physical tension
+eeli
+or discomfort until they really grab my
+attention.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+309 i_forget_a_person_s_n
+ame_a
+
+I forget a person's name almost as soon as I've
+been told it for the rst time.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+310 it_seems_i_am_runnin It seems I am "running on automatic," without
+g_on_a
+much awareness of what I'm doing.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+311 i_rush_through_activit
+ies
+
+I rush through activities without being really
+attentive to them.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+312 i_get_so_focused_on_t I get so focused on the goal I want to achieve
+he_go
+that I lose touch with what I'm doing right now
+to get there.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+313 i_do_jobs_or_tasks_au
+tomat
+
+I do jobs or tasks automatically, without being
+aware of what I'm doing.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+314 i_ nd_myself_listenin
+g_to
+
+I nd myself listening to someone with one ear,
+doing something else at the same time.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+315 i_drive_places_on_aut
+omati
+
+I drive places on "automatic pilot" and then
+wonder why I went there.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+316 i_ nd_myself_preoccu
+pied
+
+I nd myself preoccupied with the future or the
+past.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+317 i_ nd_myself_doing_t
+hings
+
+I nd myself doing things without paying
+attention.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+318 i_snack_without_bein
+g_awar
+
+I snack without being aware that I'm eating.
+
+radio (Matrix), Required
+1 Almost Always
+2 Very Frequently
+3 Somewhat Frequently
+4 Somewhat Infrequently
+5 Very Infrequently
+6 Almost Never
+
+319 mindful_attention_aw Section Header: Form Status
+areness_scale_comple Complete?
+te
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+320 erq1
+
+Emotional Regulations Questionnaire (emotional_regulations_questionnaire)
+Section Header: We would like to ask you some questions
+about your emotional life, in particular, how you control
+(that is, regulate and manage) your emotions. The questions
+below involve two distinct aspects of your emotional life.
+One is your emotional experience, or what you feel like
+inside. The other is your emotional expression, or how you
+show your emotions in the way you talk, gesture, or behave.
+Although some of the following questions may seem similar
+to one another, they di er in important ways.
+
+slider, Required
+Slider labels: strongly disagree, neutral,
+strongly agree
+Custom alignment: RH
+
+When I want to feel more positive emotion
+(such as joy or or amusement), I change what
+I'm thinking about
+321 erq2
+
+I keep my emotions to myself.
+
+slider, Required
+Slider labels: strongly disagree, neutral,
+strongly agree
+Custom alignment: RH
+
+322 erq3
+
+When I want to feel less negative emotion (such slider, Required
+as sadness or anger), I change what I'm thinking Slider labels: strongly disagree, neutral,
+about.
+strongly agree
+Custom alignment: RH
+
+323 erq4
+
+When I am feeling positive emotions, I am
+careful not to express them.
+
+324 erq5
+
+When I'm faced with a stressful situation, I make slider, Required
+myself think about it in a way that helps me
+Slider labels: strongly disagree, neutral,
+stay calm.
+strongly agree
+Custom alignment: RH
+
+325 erq6
+
+I control my emotions by not expressing them.
+
+326 erq7
+
+When I want to feel more positive emotion, I
+slider, Required
+change the way I'm thinking about the situation. Slider labels: strongly disagree, neutral,
+strongly agree
+Custom alignment: RH
+
+327 erq8
+
+I control my emotions by changing the way I
+think about the situation I'm in.
+
+slider, Required
+Slider labels: strongly disagree, neutral,
+strongly agree
+Custom alignment: RH
+
+328 erq9
+
+When I am feeling negative emotions, I make
+sure not to express them.
+
+slider, Required
+Slider labels: strongly disagree, neutral,
+strongly agree
+Custom alignment: RH
+
+329 erq10
+
+When I want to feel less negative emotion, I
+slider, Required
+change the way I'm thinking about the situation. Slider labels: strongly disagree, neutral,
+strongly agree
+Custom alignment: RH
+
+330 emotional_regulation
+s_questionnaire_com
+plete
+
+Section Header: Form Status
+
+Complete?
+
+slider, Required
+Slider labels: strongly agree, neutral,
+strongly disagree
+Custom alignment: RH
+
+slider, Required
+Slider labels: strongly disagree, neutral,
+strongly agree
+Custom alignment: RH
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+331 ace1
+
+332 ace2
+
+ACE+Clarke (aceclarke)
+Did a parent or other adult in the household
+OFTEN swear at you, insult you, put you down,
+or humiliate you? OR act in a way that made
+you afraid that you might be physically hurt?
+
+radio (Matrix), Required
+
+Did a parent or other adult in the household
+OFTEN push, grab, slap, or throw something at
+you? OR ever hit you so hard that you had
+marks or were injured?
+
+radio (Matrix), Required
+
+0 No
+1 Yes
+
+0 No
+1 Yes
+
+333 ace3
+
+334 ace4
+
+Did an adult or person at least 5 years older
+than you EVER touch or fondle you or have you
+touch their body in a sexual way? OR try to or
+actually have oral, anal, or vaginal sex with you?
+
+radio (Matrix), Required
+
+Did you OFTEN feel that no one in your family
+loved you or thought you were important or
+special? OR your family didn't look out for each
+other, feel close to each other, or support each
+other?
+
+radio (Matrix), Required
+
+0 No
+1 Yes
+
+0 No
+1 Yes
+
+335 ace5
+
+Did you OFTEN feel that you didn't have enough radio (Matrix), Required
+to eat, had to wear dirty clothes, and had no
+0 No
+one to protect you? OR your parents were too
+1 Yes
+drunk or high to take care of you or take you to
+the doctor if you needed it?
+
+336 ace6
+
+Were your parents EVER separated or divorced?
+
+radio (Matrix), Required
+0 No
+1 Yes
+
+337 ace7
+
+Was your mother or stepmother OFTEN
+radio (Matrix), Required
+pushed, grabbed, slapped, or had something
+0 No
+thrown at her? OR SOMETIMES OR OFTEN
+1 Yes
+kicked, bitten, hit with a st, or hit with
+something hard? OR EVER repeatedly hit over at
+least a few minutes or threatened with a gun or
+knife?
+
+338 ace8
+
+Did you live with anyone who was a problem
+drinker or alcoholic or who used street drugs?
+
+radio (Matrix), Required
+0 No
+1 Yes
+
+339 ace9
+
+Was a household member depressed or
+radio (Matrix), Required
+mentally ill or did a household member attempt 0 No
+suicide?
+1 Yes
+
+340 ace10
+
+Did a household member go to prison?
+
+radio (Matrix), Required
+0 No
+1 Yes
+
+341 clarke_ace
+
+How would you feel if you discovered that a
+child you care about was experiencing
+everything you did as a child?
+
+radio, Required
+0 Happy
+1 Neutral
+2 Sad or angry
+3 Very sad or very angry
+
+342 aceclarke_complete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+BPI-SF daily (bpisf_daily)
+
+343 pain_worst_daily
+
+Section Header: Please rate your pain by choosing the one
+number that best describes your pain. 0 = NO PAIN AT ALL
+10 = PAIN AS BAD AS YOU CAN IMAGINE
+
+at its WORST in the last 24 HOURS:
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+344 pain_least_daily
+
+at its LEAST in the last 24 HOURS:
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+
+345 pain_avg_daily
+
+on average:
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+346 pain_now_daily
+
+right now:
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+347 general_activity_daily
+
+Section Header: Choose the one number that describes
+how, DURING THE PAST 24 HOURS, pain has interfered with
+each of the below. 0 = DOES NOT INTERFERE 10 =
+COMPLETELY INTERFERES
+
+General activity
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+
+348 mood_daily
+
+Mood
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+349 walking_ability_daily
+
+Walking ability
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+350 normal_work_include
+s_both_daily
+
+Normal work (includes both work outside the
+home and housework)
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+
+351 relations_with_other_
+peopl_daily
+
+Relations with other people
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+352 sleep_interference_da
+ily
+
+Sleep
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+353 enjoyment_of_life_dail Enjoyment of life
+y
+
+radio (Matrix), Required
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10 10
+
+354 bpisf_daily_complete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+Instrument:
+
+Cliexa (cliexa)
+
+355 please_take_out_your
+_phone
+
+Please take out your phone and complete the
+Cliexa-EASE app. If this is your rst time doing
+this, a member of the research team will walk
+you through the installation and set up. If you
+have already had your brain scans but never
+used this app before, please simply disregard
+this message and hit Continue below.
+
+descriptive
+
+Once the app is open, please complete the "I
+Feel..." task, and please also record your current
+medications.
+For the "I Feel..." task, please select the feelings
+that you have had *IN THE PAST WEEK*. Use
+the scale that will pop up to rate how intense
+the feelings were, and then draw on your body
+where you were feeling it. If you did not feel
+anything in your body, select "No speci c
+location".
+The data you enter in this app is anonymous,
+and we will not share any other information
+about you with Cliexa. So Cliexa will not be able
+to link this data to you in any way.
+356 were_you_able_to_co
+mplete
+
+Were you able to complete the Cliexa-EASE app? yesno
+1 Yes
+0 No
+
+357 cliexa_complete
+
+Section Header: Form Status
+
+Complete?
+
+dropdown
+0 Incomplete
+1 Unveri ed
+2 Complete
+
+
