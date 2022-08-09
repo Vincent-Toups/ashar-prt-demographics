@@ -1,6 +1,8 @@
 Demographic Effects on Pain Reprocessing Therapy Success
 ========================================================
 
+![d3 visualization](./static-figures/d3-vis.png)
+
 This repository contains an analysis of demographic data associated
 with the paper ["Effect of Pain Reprocessing Therapy vs Placebo and
 Usual Care for Patients With Chronic Back Pain: A Randomized Clinical
