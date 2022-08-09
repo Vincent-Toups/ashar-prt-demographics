@@ -1,6 +1,6 @@
 .PHONY: clean
 .PHONY: d3-vis
-.PHONY: demo-ae-vis
+.PHONY: visualization
 
 clean:
 	rm -rf models
@@ -8,6 +8,7 @@ clean:
 	rm -rf derived_data
 	rm -rf sentinels
 	rm -rf .created-dirs
+	rm writeup.pdf
 
 .created-dirs:
 	mkdir -p models
@@ -49,14 +50,14 @@ derived_data/clinical-outcomes-with-clustering.csv\
   derived_data/clinical-outcomes-with-ae.csv
 	python3 cluster-clinical-outcomes.py
 
-figures/bpi_intensity_by_group.png: source_data/clinical_outcomes.csv bpi_intensity_by_group.R
+figures/bpi_intensity_by_group.png: source_data/clinical_outcomes.csv bpi_intensity_by_group.R derived_data/clinical_outcomes-d3.csv
 	Rscript bpi_intensity_by_group.R
 
 # Plots of various non-projected properties of clinical outcomes per
 # cluster. Not very interesting because the clusters are not very
 # interesting and the AE projection is just (roughly) back pain
 # intensity.
-# Note this uses a sentinal value because we produce many scripts.
+# Note this uses a sentinal value because we produce many plots.
 sentinels/cluster-plots.txt: .created-dirs\
  derived_data/clinical-outcomes-with-clustering.csv\
  cluster-plots.R
@@ -116,8 +117,15 @@ figures/outcomes_by_demographic_clustering.png figures/outcomes_by_demographic_c
 d3-vis: derived_data/clinical_outcomes-d3.csv
 	python3 -m http.server 8888
 
-demo-ae-vis: derived_data/clinical_outcomes-d3.csv 
+
+derived_data/meta-data.csv: source_data/clinical_outcomes.csv source_data/demographics.csv gen-meta-data.R
+	Rscript gen-meta-data.R
+
+# Start a server for the d3 visualization of the results of this
+# project.
+visualization: derived_data/clinical_outcomes-d3.csv 
 	lighttpd -D -f lighttpd.conf
 
-derived_data/meta-data.R: source_data/clinical_outcomes.csv source_data/demographics.csv gen-meta-data.R
-	Rscript gen-meta-data.R
+# Build the final report for the project.
+writeup.pdf: figures/bpi_intensity_by_group.png figures/demo-projection.png figures/outcomes_by_demographic_clustering.png
+	pdflatex writeup.tex
