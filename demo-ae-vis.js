@@ -104,7 +104,7 @@ const outside_in = (data) => {
 const amin = a => a.reduce((a,b) => Math.min(a,b),Infinity)
 const amax = a => a.reduce((a,b) => Math.max(a,b),-Infinity)
 
-const setup_axes = (svg_element, data, x, y, margin) => {
+const setup_axes = (svg_element, data, x, x_label, y, y_label, margin) => {
     const id = svg_element.attr("id");
     const width = svg_element.node().clientWidth;
     const height = svg_element.node().clientHeight;
@@ -127,10 +127,25 @@ const setup_axes = (svg_element, data, x, y, margin) => {
         .call(d3.axisBottom(x_scale));
 
     svg_element
+        .append("text")
+        .attr("transform", translate(width/2, height-bottom/4))
+        .attr("fill","black")
+        .text(x_label)
+
+    svg_element
         .append("g")
         .attr("id",`${id}_y`)
         .attr("transform", `translate(${left}, 0)`)
         .call(d3.axisLeft(y_scale));
+
+    svg_element
+        .append("g")
+        .attr("transform", translate(left/2, height/2))
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("fill","black")
+        .text(y_label)
+
 
     svg_element.x_scale = x_scale;
     svg_element.y_scale = y_scale;
@@ -489,8 +504,11 @@ const main = (demo_ae, demo_raw, outcomes) => {
 
     const projection = setup_axes(d3.select("#projection"),
                                   demo_ae,
-                                  "AE1","AE2",
-                                  {top:20,right:30,bottom:30,left:40});
+                                  "AE1",
+                                  "Encoded X",
+                                  "AE2",
+                                  "Encoded Y",
+                                  {top:20,right:30,bottom:60,left:80});
     draw_ae_points(projection,
                    demo_ae,
                    projection.x_scale,
@@ -501,8 +519,8 @@ const main = (demo_ae, demo_raw, outcomes) => {
 
     const plot = setup_axes(d3.select("#plot"),
                             digest_outcomes(outcomes),
-                            "time","bpi_intensity_mean",
-                            {top:20,right:30,bottom:30,left:40});
+                            "time","Time (months)","bpi_intensity_mean","Pain Intensity",
+                            {top:20,right:30,bottom:60,left:80});
 
     draw_outcomes(plot, outcomes, plot.x_scale, plot.y_scale,
                   'time', 'bpi_intensity_mean', 'bpi_intensity_sd')
