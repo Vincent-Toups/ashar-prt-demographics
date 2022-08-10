@@ -8,7 +8,7 @@ clean:
 	rm -rf derived_data
 	rm -rf sentinels
 	rm -rf .created-dirs
-	rm writeup.pdf
+	rm -f writeup.pdf
 
 .created-dirs:
 	mkdir -p models
