@@ -1,0 +1,36 @@
+Codebook Additional Notes
+
+PATIENT-REPORTED OUTCOMES.CSV:
+Timepoints:
+- eligibility_assess_arm_1: eligibility/consent session
+- t1_arm_1: pre-treatment fMRI session
+- baseline: average of eligibility/consent session and pre-treatment fMRI session
+- t2_arm_1: post-treatment fMRI session
+- X_month_follow_up_arm_1: follow up timepoint, X months after the post-treatment fMRI session
+
+Group:
+- 1 = PRT
+- 2 = Placebo
+- 3 = No treatment
+
+- Pain_avg: 1-week average pain intensity
+- bpi_intensity: mean of the four 1-week average pain intensity items on the BPI-SF (best, worst, avg, now)
+- Alcohol, opioid, and cannabis: timeline follow back method, number of units consumed for the 2 weeks prior.
+
+- For other items and additional information: see Codebook.pdf
+
+EVOKED PAIN MAP NOTES:
+- values are beta weights (parameter estimates) from regression, representing voxel's relationship to evoked pain report
+
+EVOKED PAIN METADATA NOTES:
+- For the pain ratings, the VAS was randomly initialized to either 15 or 85 / 100 on each trial, so pain ratings of exactly 15 or 85 *may* indicate missing data
+- time: 1 = t1_arm_1 (pre-tx fMRI), 2 = t2_arm_1 (post-tx fMRI)
+
+SEED CONN MAP NOTES:
+- values are Pearson correlation coefficients, representing voxel's correlation with mean signal from the seed region
+- For the pain ratings, the VAS was randomly initialized to either 15 or 85 / 100 on each trial, so pain ratings of exactly 15 or 85 *may* indicate missing data
+
+SEED CONN METADATA NOTES:
+- median_corr_gt3SDs: Flag indicating whether the median correlation value in the image is greater than 3 standard deviations from the group mean
+- spatial_std_gt3SDs: Flag indicating whether the spatial standard deviation of the image is greater than 3 standard deviations from the group mean
+- time: 1 = t1_arm_1 (pre-tx fMRI), 2 = t2_arm_1 (post-tx fMRI)

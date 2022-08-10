@@ -1,0 +1,6 @@
+cluster,cluster_label
+2,"Cluster 2 (n=27): gender(0.000000), married_or_living_as_marri(0.000000), white_nh(1.000000), age(0.122449)"
+1,"Cluster 1 (n=33): married_or_living_as_marri(0.000000), gender(1.000000), weight(0.235669), white_nh(1.000000)"
+4,"Cluster 4 (n=19): white_nh(0.000000), backpain_length(0.113924), weight(0.458599), education(1.000000)"
+0,"Cluster 0 (n=32): gender(0.000000), married_or_living_as_marri(1.000000), sses(0.777778), white_nh(1.000000)"
+3,"Cluster 3 (n=40): gender(1.000000), married_or_living_as_marri(1.000000), white_nh(1.000000), backpain_length(0.240506)"
