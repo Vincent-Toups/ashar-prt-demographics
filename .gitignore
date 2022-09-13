@@ -61,3 +61,11 @@ flycheck_*.el
 .created-dirs
 .Rhistory
 .~lock.workshop-description.odt#
+
+__pycache__
+.ipynb_checkpoints
+
+*.aux
+*.out
+*.toc
+make.com
