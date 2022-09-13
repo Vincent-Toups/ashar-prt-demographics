@@ -5,7 +5,21 @@ import numpy as np
 from dfply import *
 from plotnine import *
 from math import ceil
+import util as u
 
+def one_hot_encode_column(df, column_name):
+    col = df[column_name];
+    df = df.drop(column_name, axis=1);
+    for value in set(col):
+        new_col_name = "_".join([column_name,str(value)]);
+        df[new_col_name] = (col == value).astype(int);
+    return df;
+
+def one_hot_encode(df, columns):
+    for c in columns:
+        df = one_hot_encode_column(df, c);
+    return df
+    
 def tt_split_groups(df, col, pct_test):
     df = df.reindex(range(df.shape[0]));
     keys = list(set(df[col]));
