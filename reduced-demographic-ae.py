@@ -118,9 +118,9 @@ def build_vae(n_input=ae_ext_layer_size,
               intermediate_size=6):
 
     input = keras.Input(shape=(n_input,));
-    e = layers.Dropout(0.1, input_shape=(n_input,))(input);
+    #e = layers.Dropout(0.1, input_shape=(n_input,))(input);
     #e = layers.GaussianNoise(0.05)(e);
-    e = layers.Dense(intermediate_size, activation='relu')(e);
+    e = layers.Dense(intermediate_size, activation='relu')(input);
     for i in range(n_intermediate-1):
         e = layers.Dense(intermediate_size, activation='relu')(e);
 
@@ -148,7 +148,7 @@ def build_vae(n_input=ae_ext_layer_size,
     return (ae,encoder)
 
 (ae, enc) = build_vae();
-ae.fit(inputs[ae_cols], target[ae_cols], epochs=1500, batch_size=25, shuffle=True, verbose=2);
+ae.fit(inputs[ae_cols], target[ae_cols], epochs=500, batch_size=25, shuffle=True, verbose=2);
 
 one_hot_data.to_csv("derived_data/reduced-demographics-one-hot.csv", index=False);
 to_json(norm_info, "derived_data/reduced-demographics-one-hot-norm-info.json");
