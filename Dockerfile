@@ -26,4 +26,4 @@ RUN Rscript --no-restore --no-save -e "tinytex::tlmgr_install(c(\"kvoptions\",\"
 RUN Rscript --no-restore --no-save -e "tinytex::tlmgr_install(c(\"hanging\",\"grfext\"))"
 RUN pip3 install jupyter jupyterlab bokeh jupyter_bokeh
 RUN Rscript --no-restore --no-save -e "install.packages(c(\"plumber\"))"
-RUN Rscript --no-restore --no-save -e "install.packages(c(\"pROC\"))"
+RUN Rscript --no-restore --no-save -e "install.packages(c(\"verification\"))"

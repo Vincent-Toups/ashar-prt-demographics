@@ -22,9 +22,10 @@ proj <- enc$predict(data %>% dplyr::select(married, age, weight, ethnicity_white
     transmute(AE1=V1, AE2=V2) %>%
     as_tibble();
 
-proj = cbind(proj, data);
+proj <- cbind(proj, data);
 
-ggplot(proj, aes(AE1, AE2)) + geom_point(aes(color=factor(ethnicity_white)));
+proj_plot <- ggplot(proj, aes(AE1, AE2)) + geom_point(aes(color=factor(ethnicity_white)));
+ggsave("figures/reduced_demographic_projection.png", plot=proj_plot);
 
 pred <- vae$predict(data %>% select(married, age, weight, ethnicity_white, ethnicity_other,
                                     ethnicity_black, ethnicity_hispanic, gender_female,
@@ -34,5 +35,17 @@ pred <- vae$predict(data %>% select(married, age, weight, ethnicity_white, ethni
               gender_male=V9) %>%
     as_tibble();
 
-thresholds = seq(0,1,length.out=100);
+# How to save a non-ggplot figure.
+png("figures/reduced-demo-married-roc.png");
+verification::roc.plot(data$married, pred$married);
+dev.off();
+
+png("figures/reduced-demo-ethnicity_white-roc.png");
+verification::roc.plot(data$ethnicity_white, pred$ethnicity_white);
+dev.off();
+
+png("figures/reduced-demo-gender_female-roc.png");
+verification::roc.plot(data$gender_female, pred$gender_female);
+dev.off();
+
 
