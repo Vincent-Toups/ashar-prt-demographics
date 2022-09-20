@@ -14,6 +14,7 @@ echo $PORT_OFFSET
 docker build . --build-arg linux_user_pwd="$(cat .password)" -t ashar
 xhost +SI:localuser:$(whoami) 
 docker run -p $D3_PORT:8888 \
+       -h ashar-prt-docker-container\
        -p $RSTUDIO_PORT:8787 \
        -v /home/toups/.emacs.d:/home/rstudio/.emacs.d \
        -v /home/toups/.emacs-trash:/home/rstudio/.emacs-trash \
