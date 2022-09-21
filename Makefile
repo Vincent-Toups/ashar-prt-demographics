@@ -121,6 +121,9 @@ d3-vis: derived_data/clinical_outcomes-d3.csv
 derived_data/meta-data.csv: source_data/clinical_outcomes.csv source_data/demographics.csv gen-meta-data.R
 	Rscript gen-meta-data.R
 
+derived_data/patient-count.fragment.Rmd: source_data/demographics.csv count-subject-types.R
+	Rscript count-subject-types.R
+
 # Start a server for the d3 visualization of the results of this
 # project.
 visualization: derived_data/clinical_outcomes-d3.csv 
@@ -129,3 +132,6 @@ visualization: derived_data/clinical_outcomes-d3.csv
 # Build the final report for the project.
 writeup.pdf: figures/bpi_intensity_by_group.png figures/demo-projection.png figures/outcomes_by_demographic_clustering.png
 	pdflatex writeup.tex
+
+report.pdf: figures/bpi_intensity_by_group.png figures/demo-projection.png figures/outcomes_by_demographic_clustering.png derived_data/patient-count.fragment.Rmd
+	R -e "rmarkdown::render(\"writeup.Rmd\", output_format=\"pdf_document\")"
