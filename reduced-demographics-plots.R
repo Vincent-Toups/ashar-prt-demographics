@@ -6,11 +6,13 @@ keras <- import("keras");
 backend <- import("keras.backend");
 kmodels <- import("keras.models");
 
+## Load Data
 py_run_string("import keras;
 from keras import backend, models;
-enc = models.load_model('models/reduced-demographics-enc');
-vae = models.load_model('models/reduced-demographics-ae')")
+enc = models.load_model('models/reduced-demographics-enc.keras');
+vae = models.load_model('models/reduced-demographics-ae.keras')")
 data <- read_csv("derived_data/reduced-demographics-one-hot.csv");
+## Done Loading Data
 
 enc <- py$enc;
 vae <- py$vae;
@@ -25,6 +27,7 @@ proj <- enc$predict(data %>% dplyr::select(married, age, weight, ethnicity_white
 proj <- cbind(proj, data);
 
 proj_plot <- ggplot(proj, aes(AE1, AE2)) + geom_point(aes(color=factor(ethnicity_white)));
+## create an image
 ggsave("figures/reduced_demographic_projection.png", plot=proj_plot);
 
 pred <- vae$predict(data %>% select(married, age, weight, ethnicity_white, ethnicity_other,

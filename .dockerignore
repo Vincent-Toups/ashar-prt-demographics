@@ -1,2 +1,4 @@
 *
 !hello.sl
+!setup-emacs.el
+!local-init.el

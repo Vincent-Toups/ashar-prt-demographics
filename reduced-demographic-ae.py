@@ -148,7 +148,7 @@ def build_vae(n_input=ae_ext_layer_size,
     return (ae,encoder)
 
 (ae, enc) = build_vae();
-ae.fit(inputs[ae_cols], target[ae_cols], epochs=500, batch_size=25, shuffle=True, verbose=2);
+ae.fit(inputs[ae_cols], target[ae_cols], epochs=100, batch_size=25, shuffle=True, verbose=2);
 
 one_hot_data.to_csv("derived_data/reduced-demographics-one-hot.csv", index=False);
 to_json(norm_info, "derived_data/reduced-demographics-one-hot-norm-info.json");

@@ -1,5 +1,6 @@
 import keras
 from keras import layers, backend
+from keras.layers import Layer
 import pandas as pd
 import numpy as np
 from dfply import *
@@ -7,6 +8,16 @@ from plotnine import *
 from sklearn.cluster import SpectralClustering
 from numpy.random import seed
 from tensorflow.random import set_seed as tf_set_seed
+import tensorflow as tf
+
+# Define a custom sampling layer
+@keras.saving.register_keras_serializable()
+class SamplingLayer(Layer):
+    def call(self, inputs):
+        mu, log_var = inputs
+        eps = tf.random.normal(shape=tf.shape(mu), mean=0.0, stddev=1.0)
+        return mu + tf.exp(log_var / 2) * eps
+
 
 s = 600
 n_clus_main = 4;
@@ -14,7 +25,7 @@ seed(s);
 tf_set_seed(s);
 
 sdf = pd.read_csv("derived_data/normalized_demographics.csv");
-enc = keras.models.load_model("models/demographics-enc");
+enc = keras.models.load_model("models/demographics-enc.keras");
 data = pd.read_csv("source_data/demographics.csv");
 
 
